@@ -46,13 +46,11 @@ public class RegisterActivity extends AppCompatActivity {
 
     public void LoginActivity(View view)
     {
-        Intent intent= new Intent(this, MainActivity.class);
+        Intent intent= new Intent(this, login2.class);
         startActivity(intent);
         finish();
     }
-
-
-
+    
     public void RegisterAccount(View view)
     {
         String email=emailView.getText().toString();
