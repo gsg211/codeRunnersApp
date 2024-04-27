@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "373852946243",
+    "project_id": "coderunnersapp",
+    "storage_bucket": "coderunnersapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:373852946243:android:b8a0b9e4846fe02b07b9f6",
+        "android_client_info": {
+          "package_name": "com.example.coderunners"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkgCb9fa6BeU8_WhWh0c6_rUC7YFRevYs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
