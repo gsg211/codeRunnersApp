@@ -20,6 +20,11 @@ public class MainActivity extends AppCompatActivity
     {
         Intent intent= new Intent(this, RegisterActivity.class);
         startActivity(intent);
-        finish();
+    }
+
+    public void loginactivity(View view)
+    {
+        Intent intent1= new Intent(this, login2.class);
+        startActivity(intent1);
     }
 }
