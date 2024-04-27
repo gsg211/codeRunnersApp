@@ -6,9 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class MainActivity extends AppCompatActivity
 {
-
+    private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -16,15 +19,22 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
     }
 
-    public void registeractivity(View view)
+    public void formularactivity(View view)
     {
-        Intent intent= new Intent(this, RegisterActivity.class);
+        Intent intent= new Intent(this, FormularActivity.class);
         startActivity(intent);
     }
 
-    public void loginactivity(View view)
+    public void clasamentactivity(View view)
     {
-        Intent intent1= new Intent(this, login2.class);
+        Intent intent1= new Intent(this, ClasamentActivity.class);
         startActivity(intent1);
+    }
+
+    public void LogOut(View view)
+    {
+        mAuth.signOut();
+        Intent intent= new Intent(this, login2.class);
+        startActivity(intent);
     }
 }

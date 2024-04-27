@@ -5,68 +5,78 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
-    android:background="@drawable/register_bg"
+
     tools:context=".RegisterActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+
+    <TextView
+        android:id="@+id/AlreadyHaveAccontText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="LoginActivity"
+        android:text="Already have an account?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.797" />
+
+    <EditText
+        android:id="@+id/email_input"
+        android:layout_width="298dp"
+        android:layout_height="79dp"
+        android:hint="E-mail"
+        android:inputType="text"
+        android:textColorLink="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.436" />
+
+    <EditText
+        android:id="@+id/password_input"
+        android:layout_width="298dp"
+        android:layout_height="79dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.561" />
+
+    <Button
+        android:id="@+id/sendtologin_button"
+        android:layout_width="175dp"
+        android:layout_height="67dp"
+        android:onClick="RegisterAccount"
+        android:padding="18dp"
+        android:text="register:"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.73" />
+
+    <TextView
+        android:id="@+id/textRegister"
+        android:layout_width="221dp"
+        android:layout_height="40dp"
         android:gravity="center"
-        android:orientation="vertical">
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Introduceti adresa de E-mail:"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            android:textSize="20sp"
-            android:padding="18dp"
-            android:inputType="text"
-            android:id="@+id/email_input">
-
-        </EditText>
-
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Introduceti parola:"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            android:textSize="20sp"
-            android:padding="18dp"
-            android:inputType="textPassword"
-            android:id="@+id/password_input">
-
-        </EditText>
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Intregistrare"
-            android:textSize="25sp"
-            android:padding="18dp"
-            android:id="@+id/register_button">
-
-        </Button>
-
-        <Button
-            android:id="@+id/sendtologin_button"
-            android:layout_width="238dp"
-            android:layout_height="wrap_content"
-            android:onClick="mainactivity"
-            android:padding="18dp"
-            android:text="register:"
-            android:textSize="15dp">
-
-        </Button>
-
-
-
-
-    </LinearLayout>
+        android:text="REGISTER"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.147" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
