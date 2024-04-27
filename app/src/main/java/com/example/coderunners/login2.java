@@ -40,20 +40,12 @@ public class login2 extends AppCompatActivity {
         passView=findViewById(R.id.passwordText);
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        /*
+
         if(user != null){
             Intent intent=new Intent(this,MainActivity.class);
             startActivity(intent);
         }
-
-         */
-
     }
-    public void mainActivity(View view) {
-        Intent intent=new Intent(this,MainActivity.class);
-        startActivity(intent);
-    }
-
     public void RegisterActivity(View view) {
         Intent intent=new Intent(this,RegisterActivity.class);
         startActivity(intent);
