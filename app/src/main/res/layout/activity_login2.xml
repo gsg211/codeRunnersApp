@@ -66,7 +66,7 @@
         android:layout_width="175dp"
         android:layout_height="67dp"
         android:onClick="LoginAccount"
-        android:text="Button"
+        android:text="Log in"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

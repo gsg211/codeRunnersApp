@@ -14,21 +14,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
 
-import org.checkerframework.checker.nullness.qual.NonNull;
 
 public class FormularActivity extends AppCompatActivity {
-
-
-    DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
-
     EditText FirstNameView, LastNameView, CrediteView, MedieView;
     CheckBox Opt1View, Opt2View, Opt3View;
 
@@ -122,29 +110,30 @@ public class FormularActivity extends AppCompatActivity {
         else
         {
             Toast.makeText(getApplicationContext(),"to be continued", Toast.LENGTH_LONG).show();
-            Intent intent= new Intent(this, MainActivity.class);
-            startActivity(intent);
+            //Intent intent= new Intent(this, MainActivity.class);
+            //startActivity(intent);
+            if(Opt1==1)
+            {
+                opt=1;
+            }
+            if(Opt2==1)
+            {
+                opt=2;
+            }
+            if(Opt3==1)
+            {
+                opt=3;
+            }
+            student= new Student(FirstName,LastName,Credite,Medie,opt);
+            res.setText(student.toString());
         }
-        if(Opt1==1)
-        {
-            opt=1;
-        }
-        if(Opt1==2)
-        {
-            opt=2;
-        }
-        if(Opt1==3)
-        {
-            opt=3;
-        }
-        student= new Student(FirstName,LastName,Credite,Medie,opt);
-        res.setText(student.toString());
+
+
     }
 
     public void AddToDb(String firstname, String lastname, double credits,double grade,int opt) {
         Student student=new Student(firstname,lastname,credits,grade,opt);
 
-        mDatabase.setValue(student);
     }
 
     public void AddTodataBase(View view) {

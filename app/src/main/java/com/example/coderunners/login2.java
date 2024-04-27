@@ -41,10 +41,10 @@ public class login2 extends AppCompatActivity {
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-        if(user != null){
+      /*  if(user != null){
             Intent intent=new Intent(this,MainActivity.class);
             startActivity(intent);
-        }
+        } */
     }
     public void RegisterActivity(View view) {
         Intent intent=new Intent(this,RegisterActivity.class);

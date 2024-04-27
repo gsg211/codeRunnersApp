@@ -7,7 +7,12 @@ public class Student
     private double credits;
     int opt;
 
-    public Student(String firstname, String lastname, double credits,double grade,int opt)
+    @Override
+    public String toString() {
+        return FirstName + " " + Lastname;
+    }
+
+    public Student(String firstname, String lastname, double credits, double grade, int opt)
     {
         Lastname = lastname;
         FirstName = firstname;
